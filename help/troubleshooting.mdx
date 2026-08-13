@@ -1,0 +1,361 @@
+---
+title: "Troubleshooting Jarvis AI: Fix Common Issues"
+sidebarTitle: "Troubleshooting"
+description: "Step-by-step solutions for common Jarvis AI problems — microphone issues, voice mode errors, slow responses, login problems, and HUD glitches."
+---
+
+# Troubleshooting Jarvis AI
+
+Something not working as expected? This guide walks you through diagnosing and fixing the most common issues. Select the category that matches your problem to get started.
+
+---
+
+## Voice & Microphone Issues
+
+<AccordionGroup>
+
+<Accordion title="Microphone permission denied in browser">
+  If Jarvis can't access your microphone, your browser has blocked the permission — either from a previous denial or a restrictive default setting. Follow the steps for your browser below.
+
+  <Note>
+    Permission settings are browser-specific and stored per-site. You'll need to explicitly allow microphone access for the Jarvis AI domain (`app.jarvis-ai.com`).
+  </Note>
+
+  **Google Chrome**
+
+  <Steps>
+    <Step title="Open Site Settings">
+      Click the **padlock icon** (or the tune icon) to the left of the address bar while on the Jarvis AI page.
+    </Step>
+    <Step title="Find Microphone permission">
+      In the dropdown, click **Site settings**. Scroll down to **Microphone** and change it from **Blocked** to **Allow**.
+    </Step>
+    <Step title="Reload the page">
+      Click the **Reload** button or press `Ctrl+R` / `Cmd+R`. The microphone icon in Jarvis should now be active.
+    </Step>
+  </Steps>
+
+  **Microsoft Edge**
+
+  <Steps>
+    <Step title="Open Permissions for the site">
+      Click the **padlock icon** in the address bar, then select **Permissions for this site**.
+    </Step>
+    <Step title="Enable Microphone">
+      Locate **Microphone** in the list and set it to **Allow**.
+    </Step>
+    <Step title="Reload the page">
+      Reload the page for the change to take effect.
+    </Step>
+  </Steps>
+
+  **Safari**
+
+  <Steps>
+    <Step title="Open Safari Preferences">
+      In the menu bar, go to **Safari → Settings** (or **Preferences** on macOS Ventura and earlier).
+    </Step>
+    <Step title="Navigate to Websites → Microphone">
+      Click the **Websites** tab, then select **Microphone** in the left sidebar.
+    </Step>
+    <Step title="Allow access for Jarvis AI">
+      Find `app.jarvis-ai.com` in the list (or under **When visiting other websites**) and set the permission to **Allow**.
+    </Step>
+    <Step title="Reload the Jarvis tab">
+      Return to the Jarvis AI tab and reload it.
+    </Step>
+  </Steps>
+
+  If the issue persists after allowing browser permissions, also check your **operating system** microphone settings:
+  - **macOS:** System Settings → Privacy & Security → Microphone → enable your browser.
+  - **Windows:** Settings → Privacy & Security → Microphone → allow browser access.
+</Accordion>
+
+<Accordion title="Jarvis doesn't respond to voice / no waveform animation">
+  If you click the microphone button but see no waveform and Jarvis doesn't respond, work through the following checks:
+
+  <Steps>
+    <Step title="Confirm microphone permission is granted">
+      Check your browser's site permissions (see the guide above). The microphone icon in the Jarvis toolbar should turn blue/active when listening.
+    </Step>
+    <Step title="Check the selected input device">
+      Go to **Settings → Voice → Input Device** inside Jarvis and make sure the correct microphone is selected. If you recently plugged in a headset or USB mic, it may not have been auto-detected — select it manually and save.
+    </Step>
+    <Step title="Test your microphone in another app">
+      Open your OS's built-in sound recorder or a test site like [https://www.onlinemictest.com](https://www.onlinemictest.com) to confirm the physical microphone is functioning.
+    </Step>
+    <Step title="Try a different browser">
+      Some browser extensions (ad blockers, privacy tools) can silently intercept audio APIs. Test in a fresh incognito/private window or a different browser to rule this out.
+    </Step>
+    <Step title="Clear site data and reload">
+      In your browser settings, clear cookies and cached data for `app.jarvis-ai.com`, then reload and re-grant microphone permission.
+    </Step>
+  </Steps>
+</Accordion>
+
+<Accordion title="Voice recognition is inaccurate or detecting the wrong language">
+  Poor transcription accuracy is usually caused by background noise, microphone distance, or a language/dialect mismatch in settings.
+
+  <Steps>
+    <Step title="Set the correct recognition language">
+      Go to **Settings → Voice → Speech Language** and select your preferred language and regional dialect (e.g., `English (UK)` vs. `English (US)`). Save and restart voice mode.
+    </Step>
+    <Step title="Reduce background noise">
+      Move to a quieter environment, or use a headset with a directional microphone. Fan noise, music, and open-plan office chatter are common causes of transcription errors.
+    </Step>
+    <Step title="Adjust microphone input gain">
+      If your voice sounds too quiet or too loud on test recordings, adjust the input level in your OS sound settings. Aim for a peak level around 70–80% on the input meter.
+    </Step>
+    <Step title="Speak slightly slower and more clearly">
+      Voice recognition performs best with a moderate pace. Avoid trailing off at the end of sentences — end your phrase clearly before pausing.
+    </Step>
+    <Step title="Enable noise suppression">
+      Under **Settings → Voice → Audio Processing**, toggle on **Noise Suppression** and **Echo Cancellation** for improved accuracy in noisy environments.
+    </Step>
+  </Steps>
+</Accordion>
+
+<Accordion title="Jarvis's voice output is silent or too quiet">
+  If Jarvis is responding but you can't hear anything (or audio is very faint), try these steps:
+
+  <Steps>
+    <Step title="Check system and browser volume">
+      Ensure your device volume is turned up and that the browser tab isn't muted. In Chrome and Edge, right-click the tab and confirm **Mute site** is not checked.
+    </Step>
+    <Step title="Check the Jarvis voice volume slider">
+      Go to **Settings → Voice → Output Volume** and make sure it isn't set to zero. This setting is independent of your system volume.
+    </Step>
+    <Step title="Confirm the correct audio output device">
+      If you have multiple audio outputs (e.g., speakers and Bluetooth headphones), check that the correct one is selected in **Settings → Voice → Output Device**.
+    </Step>
+    <Step title="Try forcing audio by interacting first">
+      Some browsers block auto-playing audio until the user interacts with the page. Click anywhere on the Jarvis interface before triggering voice output, then try again.
+    </Step>
+    <Step title="Reload the page">
+      Occasionally the audio context can stall after a long session. A full page reload (Ctrl+R / Cmd+R) typically resolves this.
+    </Step>
+  </Steps>
+
+  <Note>
+    On iOS Safari, audio output from web apps is linked to the **ringer/silent switch** on the side of the device. Make sure your iPhone is not in silent mode.
+  </Note>
+</Accordion>
+
+</AccordionGroup>
+
+---
+
+## Chat Issues
+
+<AccordionGroup>
+
+<Accordion title='Messages not sending (stuck on "thinking")'>
+  If Jarvis shows a persistent "thinking" spinner and never returns a response, the issue is usually a connectivity hiccup or a session timeout.
+
+  <Steps>
+    <Step title="Check your internet connection">
+      Open another website or run a quick speed test to confirm you're online. Jarvis requires a stable connection for real-time responses.
+    </Step>
+    <Step title="Stop and resend the message">
+      Click the **Stop** button (square icon) next to the thinking indicator, then resend your message. Sometimes a single request gets dropped by the network.
+    </Step>
+    <Step title="Refresh the session">
+      Click your profile icon and select **Refresh Session**, or simply reload the page. Your conversation history will be preserved.
+    </Step>
+    <Step title="Check the Jarvis status page">
+      Visit [status.jarvis-ai.com](https://status.jarvis-ai.com) to see if there's an ongoing service incident or elevated response latency.
+    </Step>
+    <Step title="Clear browser cache">
+      If the problem recurs consistently, clear the cache for `app.jarvis-ai.com` in your browser settings and log in again.
+    </Step>
+  </Steps>
+</Accordion>
+
+<Accordion title="Jarvis responses are cut off mid-sentence">
+  Truncated responses typically occur when a response exceeds the display buffer, when the network drops mid-stream, or due to a token-limit constraint on the Free plan.
+
+  <Steps>
+    <Step title="Ask Jarvis to continue">
+      Type `continue` or `please finish your response` and send it. Jarvis will pick up where it left off.
+    </Step>
+    <Step title="Break large requests into smaller parts">
+      If you're asking for a very long output (e.g., a 2,000-word essay or a large code file), split the request into sections. Ask for an outline first, then expand each section separately.
+    </Step>
+    <Step title="Check plan response limits">
+      Free plan users have a maximum output length per message. Upgrading to **Jarvis Pro** significantly increases this limit. Visit [jarvis-ai.app](https://jarvis-ai.app) to compare plans.
+    </Step>
+    <Step title="Check your network stability">
+      Streaming responses are sensitive to network interruptions. If you're on a weak Wi-Fi signal, try switching to a wired connection or a more stable network.
+    </Step>
+  </Steps>
+</Accordion>
+
+<Accordion title="Chat history not loading">
+  If your previous conversations aren't appearing in the sidebar, here's how to diagnose it:
+
+  <Steps>
+    <Step title="Confirm you're logged in to the correct account">
+      Check the profile icon in the top-right corner to make sure you're signed in with the email address associated with your history.
+    </Step>
+    <Step title="Wait and refresh">
+      History syncing can occasionally take 30–60 seconds after login. Wait a moment, then press `Ctrl+R` / `Cmd+R` to refresh.
+    </Step>
+    <Step title="Check History settings">
+      Navigate to **Settings → Privacy** and confirm that **Save Conversation History** is toggled on. If it was previously off, conversations from that period were not saved.
+    </Step>
+    <Step title="Try a different browser or device">
+      If history loads on another device, the issue is likely a corrupted local cache. Clear site data for `app.jarvis-ai.com` in your current browser and log in again.
+    </Step>
+  </Steps>
+
+  <Warning>
+    If you previously used **Incognito Mode** or had history saving disabled, those conversations were never stored and cannot be recovered. This is by design to protect your privacy.
+  </Warning>
+</Accordion>
+
+</AccordionGroup>
+
+---
+
+## HUD & Interface Issues
+
+<AccordionGroup>
+
+<Accordion title="HUD animations are lagging or stuttering">
+  The Jarvis HUD is designed to be visually rich, but the particle effects and animated overlays can be demanding on older hardware. Here's how to get a smoother experience:
+
+  <Steps>
+    <Step title="Reduce particle density">
+      Go to **Settings → Interface → HUD Performance → Particle Density** and lower it from **High** to **Medium** or **Low**. This typically provides the biggest performance improvement on older GPUs.
+    </Step>
+    <Step title="Enable Reduced Motion">
+      Toggle on **Settings → Interface → Reduced Motion** to disable non-essential animations while keeping the core HUD intact. This option also respects your OS-level accessibility reduced-motion setting automatically.
+    </Step>
+    <Step title="Close unused browser tabs and apps">
+      The HUD uses GPU compositing — freeing up system resources by closing background apps and tabs will noticeably improve frame rates.
+    </Step>
+    <Step title="Enable hardware acceleration in your browser">
+      - **Chrome:** Settings → System → **Use hardware acceleration when available** → toggle on, then relaunch.
+      - **Edge:** Settings → System and performance → **Use hardware acceleration when available** → toggle on, then relaunch.
+      - **Firefox:** Settings → General → Performance → **Use hardware acceleration when available**.
+    </Step>
+    <Step title="Try a Chromium-based browser">
+      If you're on Firefox or Safari, try Chrome or Edge for better WebGL performance, which the HUD relies on for particle animations.
+    </Step>
+  </Steps>
+</Accordion>
+
+<Accordion title="Page loads as blank or broken layout">
+  A blank screen or visually broken layout usually points to a JavaScript error, a failed resource load, or a browser compatibility issue.
+
+  <Steps>
+    <Step title="Hard-reload the page">
+      Press `Ctrl+Shift+R` (Windows/Linux) or `Cmd+Shift+R` (Mac) to bypass cache and force a full reload.
+    </Step>
+    <Step title="Disable browser extensions">
+      Open an incognito/private window (which disables most extensions by default) and visit Jarvis. If the layout loads correctly, a browser extension is the culprit. Re-enable extensions one by one to identify the offender.
+    </Step>
+    <Step title="Clear site data">
+      In your browser settings, clear all cached data and cookies for `app.jarvis-ai.com`, then reload.
+    </Step>
+    <Step title="Update your browser">
+      Jarvis requires a modern browser. Ensure you're running the latest stable version of Chrome, Edge, Firefox, or Safari.
+    </Step>
+    <Step title="Check the browser console for errors">
+      Press `F12` to open Developer Tools, navigate to the **Console** tab, and look for red error messages. Share these with [support@jarvis-ai.com](mailto:support@jarvis-ai.com) if the issue persists — they help our team diagnose the root cause quickly.
+    </Step>
+  </Steps>
+</Accordion>
+
+<Accordion title="HUD theme not applying correctly">
+  If colours, backgrounds, or the selected theme aren't rendering as expected, try the following:
+
+  <Steps>
+    <Step title="Re-apply the theme">
+      Go to **Settings → Interface → Theme**, select a different theme, save, then switch back to your preferred theme. This forces a re-render of all themed components.
+    </Step>
+    <Step title="Check for conflicting browser dark mode overrides">
+      Some browsers or OS dark-mode settings can override web app colours. In Chrome, you can disable forced dark mode by navigating to `chrome://flags/#enable-force-dark` and setting it to **Disabled**.
+    </Step>
+    <Step title="Clear cached styles">
+      Cached CSS files can occasionally deliver stale styles after an update. Clear site data for `app.jarvis-ai.com` and reload.
+    </Step>
+    <Step title="Try in a fresh browser profile">
+      Create a new browser profile with no extensions and test the theme there. If it works, the issue is related to a customisation or extension in your main profile.
+    </Step>
+  </Steps>
+
+  <Note>
+    Custom themes for Pro and Ultra users are synced to the cloud, so your theme should appear correctly on any device you log in to. If a theme looks different on one specific device, that device's cache is likely serving old assets.
+  </Note>
+</Accordion>
+
+</AccordionGroup>
+
+---
+
+## Account Issues
+
+<AccordionGroup>
+
+<Accordion title="Can't log in / forgot password">
+  If you're unable to access your account, follow these steps to regain access:
+
+  <Steps>
+    <Step title="Use the Forgot Password flow">
+      On the login screen, click **Forgot password?** and enter your account email. A reset link will be sent within a few minutes.
+    </Step>
+    <Step title="Check your spam/junk folder">
+      Password reset emails occasionally get filtered. Search for emails from `noreply@jarvis-ai.com` in your spam folder.
+    </Step>
+    <Step title="Use the correct email address">
+      If you're unsure which email you registered with (especially if you use multiple addresses), try each one on the forgot password screen.
+    </Step>
+    <Step title="Try an SSO login method">
+      If you originally signed up with **Continue with Google** or **Continue with Apple**, use that same button on the login page rather than the email/password form.
+    </Step>
+    <Step title="Contact support">
+      If none of the above work, email [support@jarvis-ai.com](mailto:support@jarvis-ai.com) with your account email and a description of the issue. The support team can verify your identity and restore access.
+    </Step>
+  </Steps>
+
+  <Warning>
+    For security reasons, Jarvis support staff will **never** ask for your password over email or chat. If someone claiming to be from Jarvis AI asks for your password, do not provide it and report the message to [security@jarvis-ai.com](mailto:security@jarvis-ai.com).
+  </Warning>
+</Accordion>
+
+<Accordion title="Session keeps expiring / getting logged out">
+  If Jarvis logs you out frequently, one of the following is usually the cause:
+
+  <Steps>
+    <Step title="Check your session duration setting">
+      Go to **Settings → Account → Security → Session Duration** and set it to **Extended** if you're on a private device and want to stay logged in longer.
+    </Step>
+    <Step title="Disable aggressive cookie clearing">
+      Some browser privacy settings or extensions (such as Cookie AutoDelete) clear cookies on tab close, which logs you out. Whitelist `app.jarvis-ai.com` in any such extension.
+    </Step>
+    <Step title="Avoid private/incognito browsing for regular use">
+      Incognito windows discard all session data when closed. Use a normal browser window if you want to stay logged in.
+    </Step>
+    <Step title="Re-enable third-party cookies if blocked">
+      Jarvis's session management may rely on first-party cookies. Check that your browser isn't set to block all cookies for the Jarvis domain. In Chrome, navigate to **Settings → Privacy and Security → Cookies** and ensure `app.jarvis-ai.com` isn't listed under blocked sites.
+    </Step>
+    <Step title="Enable two-factor authentication">
+      If you suspect your account is being accessed by someone else (causing forced logouts), enable **Two-Factor Authentication** under **Settings → Account → Security** immediately, then change your password.
+    </Step>
+  </Steps>
+</Accordion>
+
+</AccordionGroup>
+
+---
+
+## Still Need Help?
+
+If you've worked through the steps above and the problem isn't resolved, our support team is here to help.
+
+- **Email support:** [support@jarvis-ai.com](mailto:support@jarvis-ai.com) — include your account email, a description of the issue, any error messages you see, and your browser/device details. We typically respond within one business day.
+- **Community forum:** Browse or post in the [Jarvis Community Forum](https://jarvis-ai.app/community) where power users and staff discuss common issues and share tips.
+- **Service status:** Check [status.jarvis-ai.com](https://status.jarvis-ai.com) for real-time information on outages and maintenance windows.
+
+Looking for general product information instead? Head back to the [FAQ page](/help/faq) for answers to the most common questions about features, plans, and settings.

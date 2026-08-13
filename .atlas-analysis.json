@@ -1,13 +1,11 @@
 {
-  "$schema": "https://mintlify.com/docs.json",
+  "projectType": "saas",
+  "projectName": "Jarvis AI",
+  "projectDescription": "Jarvis is an Iron Man-inspired superintelligent AI assistant with a futuristic HUD interface, supporting both text chat and voice conversation.",
   "theme": "luma",
-  "name": "Jarvis AI",
-  "colors": {
-    "primary": "#ef7025",
-    "light": "#eec9bc",
-    "dark": "#4fa1ab"
-  },
-  "favicon": "/favicon.svg",
+  "primaryColor": "#ef7025",
+  "lightColor": "#eec9bc",
+  "darkColor": "#4fa1ab",
   "navigation": {
     "tabs": [
       {
@@ -49,14 +47,20 @@
       }
     ]
   },
-  "navbar": {
-    "primary": {
-      "type": "button",
-      "label": "Launch Jarvis",
-      "href": "https://jarvis-ai.app"
-    }
-  },
-  "footer": {
-    "socials": {}
-  }
+  "keyFeatures": [
+    "Real-time AI chat powered by a large language model",
+    "Voice interaction with speech recognition and synthesis",
+    "Futuristic Iron Man-style HUD interface",
+    "Jarvis AI persona — intelligent, witty, and always on-call",
+    "Text and voice modes seamlessly switchable",
+    "Customizable personality and voice settings",
+    "Ambient HUD visual effects and animations"
+  ],
+  "publicApiSurface": [
+    "Chat message endpoint",
+    "Voice input/output stream",
+    "Jarvis personality configuration",
+    "HUD theme customization options",
+    "Session history management"
+  ]
 }

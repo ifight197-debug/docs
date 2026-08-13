@@ -1,0 +1,134 @@
+---
+title: "The Jarvis HUD: Your Futuristic Iron Man Interface"
+sidebarTitle: "HUD Interface"
+description: "Explore the immersive heads-up display that powers Jarvis. Animated arcs, glowing panels, and status readouts bring the Iron Man experience to life."
+---
+
+## Design Philosophy
+
+Jarvis was built to feel like more than a chat window — it's an **experience**. Every design decision is rooted in a single question: *What would it feel like to actually talk to Tony Stark's AI?*
+
+The answer is the HUD: a heads-up display inspired directly by the JARVIS and FRIDAY interfaces from the Marvel Cinematic Universe. The visual language borrows the layered depth, electric blue palette, animated arcs, and data-dense readouts that define Stark's technology — then translates them into a fully functional, web-based AI interface.
+
+The goal is immersion without friction. The HUD looks stunning, but every animation and visual element serves a functional purpose: telling you what Jarvis is doing, where to look, and how to interact.
+
+---
+
+## Key Visual Elements
+
+### Arc Reactor Motif
+
+At the heart of the HUD sits the **arc reactor ring** — a circular, multi-layered animated arc surrounding the voice activator button. Concentric rings rotate at different speeds, each subtly suggesting the repulsor energy that powers Stark's suit. The ring's color and pulse rate shift dynamically to reflect Jarvis's current state (see status indicators below).
+
+### Hexagonal Grid Background
+
+The background features a **tessellated hexagonal grid** — a reference to the honeycomb structural patterns throughout Stark's workshop. The grid reacts to cursor or touch movement with a subtle **parallax shift**, creating a convincing sense of depth and three-dimensionality as you navigate the interface.
+
+### Glowing Neon Panels
+
+Content panels — the chat window, settings drawers, status bars — are rendered as **semi-transparent neon-outlined cards** with animated scan lines running vertically across the surface at timed intervals. This simulates the feel of looking at holographic projections rather than flat browser windows.
+
+### Color-Coded Status Indicators
+
+Every Jarvis state has a distinct color signature, visible across the arc ring, panel borders, and status bar:
+
+| State | Color | Meaning |
+|---|---|---|
+| **Ready** | Electric Blue `#00BFFF` | Jarvis is idle and waiting for input |
+| **Thinking** | Amber `#FFA500` | Processing your request |
+| **Speaking** | Cyan `#00FFFF` | Jarvis is delivering a voice response |
+| **Listening** | Bright Green `#39FF14` | Voice mode is active, microphone is open |
+| **Error** | Alert Red `#FF3131` | Something went wrong — check the status bar |
+
+### Animated Text Rendering
+
+Jarvis doesn't just display responses — it **renders them**. Text appears character by character in a high-speed typewriter animation, giving the impression that Jarvis is composing the answer in real time. The cursor blinks between characters, and the scroll position follows the text as it cascades down the chat panel.
+
+---
+
+## Responsive Layout
+
+The HUD adapts intelligently across screen sizes:
+
+- **Desktop (1280px+):** Full immersive experience — all panels, animated backgrounds, arc elements, and status bars visible simultaneously.
+- **Tablet (768px–1279px):** Side panels collapse into swipe-accessible drawers. Arc animations scale to fit. Core functionality remains fully accessible.
+- **Mobile (< 768px):** The interface enters an optimized mobile layout — the hexagonal background subtly simplifies, the arc reactor motif scales down, and the chat panel takes full-screen priority. Voice mode remains fully functional.
+
+---
+
+## HUD Modes
+
+Choose the visual intensity that suits your environment or hardware from **Settings → Display → HUD Mode**.
+
+<AccordionGroup>
+  <Accordion title="Full HUD — Immersive Mode">
+    The complete Jarvis experience. Every visual layer is active:
+    - Animated hexagonal parallax background
+    - Rotating multi-ring arc reactor with dynamic color transitions
+    - Animated scan lines across all panels
+    - Character-by-character text rendering
+    - Full color-coded status indicators with glow effects
+    - Floating status readouts showing model activity and session info
+
+    **Best for:** Dedicated workstations, high-end laptops, or anyone who wants the full Iron Man aesthetic. Requires a reasonably modern GPU for smooth 60fps animations.
+  </Accordion>
+  <Accordion title="Compact Mode — Minimal Visual Load">
+    A streamlined version of the HUD that retains the core aesthetic without the most GPU-intensive effects:
+    - Static hexagonal grid (no parallax movement)
+    - Simplified single-ring arc reactor (color transitions remain)
+    - Scan lines disabled
+    - Text rendering animation retained at reduced speed
+    - Status indicators shown as solid color badges rather than glow effects
+
+    **Best for:** Mid-range devices, laptops on battery, or users who want the look without the computational overhead. Ideal for longer work sessions where the full animations might become distracting.
+  </Accordion>
+  <Accordion title="Minimal Mode — Chat Panel Only">
+    Strips back everything except what's essential for communication:
+    - Plain dark background with subtle gradient
+    - No background animations or arc elements
+    - Clean, flat chat panel with standard text rendering
+    - Status shown as a simple text label in the header bar
+
+    **Best for:** Low-end devices, accessibility needs, focus-intensive work sessions, or users who simply prefer a clean interface. All of Jarvis's intelligence is fully available — only the visual decoration is removed.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Dark and Light Variants
+
+By default, Jarvis uses a **dark theme** — deep navy and black backgrounds with electric blue and cyan accents, true to the MCU aesthetic. A **light variant** is available for high-ambient-light environments:
+
+- **Dark Theme (default):** High contrast, neon accents, full immersion — best in dim or controlled lighting.
+- **Light Theme:** White and light-grey panels with deep blue accents — readable in bright offices or outdoor settings.
+
+Switch between themes at any time via **Settings → Display → Color Theme** or using the keyboard shortcut `Ctrl/Cmd + Shift + L`.
+
+---
+
+## Performance Settings
+
+<Note>
+  On lower-end devices or when running Jarvis alongside other demanding applications, visual effects can be dialed back without affecting AI performance. Navigate to **Settings → Display → Performance** and use the **Effects Intensity** slider to reduce or disable specific animations individually.
+</Note>
+
+Individual toggles include:
+
+- **Background parallax** — disable to save GPU cycles
+- **Arc reactor rotation** — simplify to a static ring
+- **Scan line animation** — purely cosmetic, safe to disable
+- **Text stream animation** — switch to instant text display
+- **Glow & blur effects** — most GPU-intensive; disabling this alone offers the largest performance gain
+
+---
+
+## Explore Further
+
+<CardGroup cols={2}>
+  <Card title="HUD Themes & Customization" icon="palette" href="/customization/hud-themes">
+    Personalize your HUD with custom color palettes, accent swaps, and community-made themes. Make Jarvis look exactly the way you want.
+  </Card>
+  <Card title="Interface Overview" icon="layout-dashboard" href="/interface-overview">
+    A complete map of every panel, button, and region in the Jarvis interface — learn what everything does at a glance.
+  </Card>
+</CardGroup>

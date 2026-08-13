@@ -1,0 +1,191 @@
+---
+title: "Jarvis Intelligence: Powered by Advanced AI Models"
+sidebarTitle: "Intelligence"
+description: "Discover the AI capabilities behind Jarvis — reasoning, analysis, code generation, creative writing, and multi-step problem solving."
+---
+
+## What Powers Jarvis
+
+Behind the HUD and the synthesized voice is a **state-of-the-art large language model** — one of the most capable AI systems available. Trained on an enormous breadth of human knowledge spanning science, technology, literature, law, mathematics, and more, it forms the cognitive engine that makes Jarvis genuinely useful rather than just impressive-looking.
+
+Jarvis is not a search engine. It doesn't retrieve pre-written answers — it **reasons**, **synthesizes**, and **generates** responses tailored to exactly what you asked, taking into account everything you've said in the conversation so far.
+
+---
+
+## Capabilities Overview
+
+<CardGroup cols={2}>
+  <Card title="Knowledge & Q&A" icon="book-open">
+    Ask Jarvis about history, science, geography, current concepts, definitions, how things work, or anything you're curious about. Jarvis draws on broad general knowledge to give clear, well-structured explanations.
+  </Card>
+  <Card title="Reasoning & Problem Solving" icon="brain">
+    Pose multi-step problems, logical puzzles, mathematical reasoning, or strategic decisions. Jarvis thinks through the problem step-by-step and shows its work — not just the answer.
+  </Card>
+  <Card title="Code Generation & Debugging" icon="code">
+    Write, refactor, explain, and debug code in any major programming language. From quick snippets to full module scaffolding, Jarvis is a capable engineering collaborator available 24/7.
+  </Card>
+  <Card title="Creative Writing" icon="pencil">
+    Draft stories, screenplays, poetry, blog posts, product descriptions, and marketing copy. Jarvis adapts tone, style, and format to your brief — from punchy ad copy to long-form narrative fiction.
+  </Card>
+  <Card title="Data Analysis & Logic" icon="chart-bar">
+    Interpret tables, numbers, and datasets. Jarvis can spot patterns, draw inferences, work through calculations, and explain statistical concepts in plain language.
+  </Card>
+  <Card title="Summarisation & Research" icon="file-search">
+    Paste in a long article, report, or document and ask Jarvis to summarize, extract key points, or answer specific questions about the content. Accelerate research without reading everything yourself.
+  </Card>
+</CardGroup>
+
+---
+
+## Code Assistance in Action
+
+Jarvis treats code like a first-class citizen. Ask it to write a function, explain an unfamiliar pattern, hunt down a bug, or convert code from one language to another.
+
+```python Example: Jarvis generates a recursive binary search with explanation
+# Prompt: "Write a recursive binary search function in Python and explain
+# how it works, including time and space complexity."
+
+def binary_search(arr: list, target: int, low: int = 0, high: int = None) -> int:
+    """
+    Recursively searches for `target` in a sorted list `arr`.
+    Returns the index of the target, or -1 if not found.
+    """
+    if high is None:
+        high = len(arr) - 1
+
+    # Base case: search space is exhausted
+    if low > high:
+        return -1
+
+    mid = (low + high) // 2
+
+    if arr[mid] == target:
+        return mid
+    elif arr[mid] < target:
+        # Target is in the right half
+        return binary_search(arr, target, mid + 1, high)
+    else:
+        # Target is in the left half
+        return binary_search(arr, target, low, mid - 1)
+
+
+# Example usage
+sorted_list = [3, 9, 15, 21, 34, 47, 56, 78, 91]
+print(binary_search(sorted_list, 47))   # Output: 5
+print(binary_search(sorted_list, 100))  # Output: -1
+
+# ─── Complexity ──────────────────────────────────────────
+# Time:  O(log n) — search space halves with each recursive call
+# Space: O(log n) — call stack depth equals number of halvings
+```
+
+Jarvis can follow up on any part of this output — ask it to convert this to an iterative version, add type hints, write unit tests, or explain the stack frame behavior in detail.
+
+---
+
+## Reasoning & Multi-Step Problem Solving
+
+Jarvis doesn't just answer surface-level questions — it can work through complex, multi-step problems by breaking them down into logical stages. When faced with ambiguous inputs, Jarvis clarifies its assumptions before proceeding, and when a problem has multiple valid approaches, it presents the trade-offs.
+
+Example prompts that showcase Jarvis's reasoning depth:
+
+- *"A train leaves Station A at 60 mph. Another leaves Station B at 80 mph from the opposite direction 150 miles away. When do they meet, and where?"*
+- *"What are the architectural trade-offs between event-driven microservices and a modular monolith for a team of 5 engineers?"*
+- *"Walk me through Bayes' theorem using a medical test example."*
+
+---
+
+## Creative Writing
+
+Jarvis adapts its voice to match your creative brief. Specify a genre, tone, length, and audience — or leave it open-ended and see what Jarvis creates.
+
+**Supported creative formats include:**
+
+- Short stories and flash fiction
+- Novel chapters and scene expansions
+- Poetry (free verse, haiku, sonnet, spoken word)
+- Screenplays and dialogue scripts
+- Blog posts and editorial articles
+- Social media copy and advertising scripts
+- Product descriptions and pitch decks
+
+<Tip>
+  For the best creative output, give Jarvis a few key details: genre, mood, key characters or subject matter, and approximate length. The more of a brief you provide, the more tailored and polished the result.
+</Tip>
+
+---
+
+## Context Window
+
+Jarvis can hold **long, complex conversations** in memory without losing track of earlier details. The extended context window means you can:
+
+- Paste in large documents or codebases for analysis
+- Have lengthy back-and-forth planning sessions without re-explaining your situation
+- Work through a complex, multi-part problem across dozens of exchanges
+- Refine and iterate on creative or technical work over an extended session
+
+Think of it as a collaborator with an exceptional memory — one that never forgets what you said at the start of the meeting.
+
+---
+
+## Multilingual Support
+
+Jarvis speaks your language — literally. It can understand and respond fluently in a wide range of languages, detect the language you're writing in automatically, and switch between languages mid-conversation.
+
+<AccordionGroup>
+  <Accordion title="Supported Languages">
+    Jarvis has strong support across a broad set of languages, including but not limited to:
+
+    | Language | Region |
+    |---|---|
+    | English | Global |
+    | Spanish | Spain, Latin America |
+    | French | France, Francophone regions |
+    | German | Germany, Austria, Switzerland |
+    | Portuguese | Brazil, Portugal |
+    | Italian | Italy |
+    | Dutch | Netherlands, Belgium |
+    | Russian | Russia and CIS countries |
+    | Mandarin Chinese | China, Taiwan, Singapore |
+    | Japanese | Japan |
+    | Korean | South Korea |
+    | Arabic | MENA region |
+    | Hindi | India |
+    | Turkish | Turkey |
+    | Polish | Poland |
+    | Swedish | Sweden |
+    | Indonesian | Indonesia |
+    | Vietnamese | Vietnam |
+
+    For languages not listed here, Jarvis may still provide partial support depending on training data coverage.
+  </Accordion>
+  <Accordion title="Automatic Language Detection">
+    You don't need to tell Jarvis what language you're using. It detects your language automatically and responds in kind. If you switch languages mid-conversation, Jarvis follows naturally.
+  </Accordion>
+  <Accordion title="Translation Assistance">
+    Jarvis can translate text between any of its supported languages, explain idiomatic expressions, and help you craft natural-sounding phrasing rather than purely literal translations. Useful for drafting multilingual communications, understanding foreign documents, or learning new languages.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Accuracy & Limitations
+
+<Note>
+  Jarvis is highly capable, but it is not infallible. Like all large language models, it can occasionally produce incorrect, outdated, or overly confident responses — sometimes called "hallucinations." Always verify critical information (medical, legal, financial, safety-related) through authoritative sources before acting on it. When in doubt, ask Jarvis to explain its reasoning or cite sources — this can help you spot where to double-check.
+</Note>
+
+Known limitations to keep in mind:
+
+- **Knowledge cutoff:** Jarvis's training data has a knowledge cutoff date. It may not be aware of very recent events, newly released software, or the latest research.
+- **Mathematical precision:** While Jarvis handles most arithmetic and logical reasoning well, complex numerical computations should be verified with a dedicated calculator or code.
+- **Opinions vs. facts:** Jarvis can discuss contested or subjective topics, but its responses reflect patterns in training data — not independent judgment or personal experience.
+- **Confidentiality:** Do not share sensitive personal data (passwords, financial account details, private health records) in the chat panel.
+
+---
+
+## Continuous Improvement
+
+Jarvis is not static. The underlying model and surrounding systems are **continuously improved** through ongoing research, fine-tuning, and user feedback. Capabilities expand over time, accuracy improves, and new features are added as the technology evolves.
+
+If Jarvis gives you a response that seems wrong, incomplete, or unhelpful, use the **thumbs down** feedback button beneath any message. Your feedback is anonymized and used to improve future responses — you're directly contributing to making Jarvis smarter for everyone.

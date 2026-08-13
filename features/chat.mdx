@@ -1,0 +1,168 @@
+---
+title: "Chat with Jarvis: Real-Time AI Conversation"
+sidebarTitle: "Chat"
+description: "Send messages to Jarvis and receive instant, intelligent responses. Jarvis understands context, remembers your conversation, and formats answers clearly."
+---
+
+## Overview
+
+The **Chat Panel** is your primary interface for communicating with Jarvis. Type any question, request, or prompt into the input bar at the bottom of the screen and press **Enter** (or click the send button) to receive an instant, intelligent response. Jarvis processes your message in real time, streaming the reply word-by-word so you never have to wait for a wall of text to appear all at once.
+
+Whether you need a quick answer, a deep technical explanation, or a creative brainstorm partner, the chat panel keeps everything organized in a clean, scrollable thread.
+
+---
+
+## Contextual Memory
+
+Jarvis remembers everything said in your current conversation thread. You never need to repeat yourself — if you mentioned your project stack three messages ago, Jarvis still knows. This **contextual memory** spans the entire session and allows for natural, flowing dialogue just like talking to a colleague who was paying attention the whole time.
+
+<Note>
+  Contextual memory is scoped to the active session. Starting a **New Session** (see [Conversation Management](#conversation-management)) clears the memory slate so Jarvis begins fresh.
+</Note>
+
+---
+
+## Rich Markdown Formatting
+
+Jarvis doesn't just return plain text. Responses are rendered as **rich Markdown**, so you'll see clearly formatted:
+
+- **Bullet lists** and numbered steps
+- **Bold** and _italic_ emphasis
+- Inline `code` snippets and full syntax-highlighted code blocks
+- Tables for structured comparisons
+- Headings that break long answers into scannable sections
+- Blockquotes for callouts and citations
+
+This means Jarvis's answers are as easy to read as a polished document, not a chat log.
+
+---
+
+## Multi-Turn Conversation Example
+
+Jarvis is built for back-and-forth dialogue. Each reply informs the next question, and Jarvis tracks the full context automatically.
+
+<CodeGroup>
+
+```text Example Exchange
+You:      I'm building a REST API in Node.js. What framework should I use?
+
+Jarvis:   For a Node.js REST API, Express is the most widely adopted choice —
+          it's minimal, flexible, and has a massive ecosystem of middleware.
+          If you want built-in structure and TypeScript-first design, consider
+          Fastify or NestJS. What's your team's experience level and do you
+          need things like dependency injection or OpenAPI generation?
+
+You:      We're a small team, mostly familiar with Express. Is there anything
+          we should add to a basic Express setup?
+
+Jarvis:   Great choice for a small team. Here's what I'd recommend adding to
+          a production-ready Express setup:
+
+          1. helmet       – Sets secure HTTP headers automatically.
+          2. express-rate-limit – Protects against brute-force attacks.
+          3. morgan       – HTTP request logging middleware.
+          4. zod / joi    – Request validation and schema enforcement.
+          5. dotenv       – Environment variable management.
+
+          Want me to scaffold a starter project structure with these included?
+
+You:      Yes please, show me the folder structure.
+
+Jarvis:   Here's a clean, scalable structure for your Express API...
+```
+
+</CodeGroup>
+
+Notice how Jarvis retained that you were using **Node.js** and **Express** without you repeating it — that's contextual memory in action.
+
+---
+
+## Code Assistance
+
+Jarvis is a capable coding partner. You can ask it to **write**, **explain**, **refactor**, or **debug** code in any major language. Responses include syntax-highlighted blocks you can copy directly.
+
+```javascript Example: Jarvis writes a rate-limited Express route
+// Ask: "Write an Express route that returns a list of users from a
+// PostgreSQL database, with basic rate limiting applied."
+
+const express = require("express");
+const rateLimit = require("express-rate-limit");
+const { Pool } = require("pg");
+
+const router = express.Router();
+const pool = new Pool({ connectionString: process.env.DATABASE_URL });
+
+// Allow max 60 requests per minute per IP
+const limiter = rateLimit({
+  windowMs: 60 * 1000,
+  max: 60,
+  message: { error: "Too many requests, please try again later." },
+});
+
+router.get("/users", limiter, async (req, res) => {
+  try {
+    const { rows } = await pool.query(
+      "SELECT id, name, email FROM users ORDER BY created_at DESC"
+    );
+    res.json({ users: rows });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Database query failed." });
+  }
+});
+
+module.exports = router;
+```
+
+<Tip>
+  When asking for code help, mention the **language, framework, and any constraints** (e.g., "using async/await, no external libraries"). The more context you give, the more accurate and tailored the code will be.
+</Tip>
+
+---
+
+## Conversation Management
+
+Keep your chat history organized with these built-in controls:
+
+<Steps>
+  <Step title="Scroll History">
+    Scroll up at any time to review earlier parts of the conversation. The full thread is preserved for the duration of your session.
+  </Step>
+  <Step title="Clear Chat">
+    Click the **Clear** icon (trash can) in the chat toolbar to erase the visible message history. This also resets Jarvis's contextual memory for the session.
+  </Step>
+  <Step title="Start a New Session">
+    Select **New Session** from the session menu to open a completely fresh conversation. Previous sessions are archived and can be accessed from the **Session History** panel.
+  </Step>
+  <Step title="Export Conversation">
+    Use the **Export** option to download the current conversation as a Markdown (`.md`) or plain text (`.txt`) file — useful for documentation or sharing with teammates.
+  </Step>
+</Steps>
+
+---
+
+## Token & Length Limits
+
+Jarvis is designed to handle **long, complex conversations** without losing track. The underlying model supports an extended context window, meaning you can have in-depth multi-turn exchanges, paste large code snippets, or share lengthy documents without hitting a wall.
+
+For extremely long inputs (e.g., pasting thousands of lines of code), Jarvis will gracefully prioritize the most relevant portions. If a message is approaching the limit, a subtle indicator appears in the input bar.
+
+---
+
+## Tips for Better Answers
+
+<Tip>
+  **Be specific.** Instead of "help me with Python," try "explain why this Python generator function is raising a StopIteration error." Precision gets precision back.
+</Tip>
+
+<Tip>
+  **Provide context.** Tell Jarvis your goal, your environment, and any constraints — just as you would when asking a knowledgeable colleague for help.
+</Tip>
+
+<Tip>
+  **Ask follow-ups.** If an answer isn't quite right, say so. "Can you make that shorter?", "Give me a different approach," or "Explain step 3 in more detail" all work perfectly.
+</Tip>
+
+<Tip>
+  **Iterate.** Treat the conversation as a collaboration. Start broad, then drill down. Jarvis remembers every step and adjusts accordingly.
+</Tip>

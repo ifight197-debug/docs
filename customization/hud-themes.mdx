@@ -1,0 +1,127 @@
+---
+title: "HUD Themes: Customise Your Jarvis Visual Interface"
+sidebarTitle: "HUD Themes"
+description: "Choose from multiple HUD color schemes and visual styles to personalise the Jarvis interface — from classic Iron Man to stealth black and arc reactor blue."
+---
+
+The Jarvis HUD isn't just functional — it's an experience. From the warm glow of the original Stark Industries red-and-gold to the cold precision of a cyberpunk neon grid, HUD Themes let you dress your interface to match your mission. All visual customisation options live in **Settings → Appearance**.
+
+## Accessing Appearance Settings
+
+Navigate to **Settings (⚙️) → Appearance** tab to access all theme and visual customisation options. Changes apply in real-time as you adjust — no save or reload required.
+
+<Note>
+  Theme changes are applied **instantly as you make adjustments** — you'll see the HUD update live behind the settings panel. There is no "save" step for visual settings; simply close the panel when you're happy with the result.
+</Note>
+
+---
+
+## Built-In Themes
+
+<AccordionGroup>
+  <Accordion title="🔴 Iron Man Classic (Default)">
+    **Palette:** Red, gold, and gunmetal grey.
+
+    The original Stark Industries colour scheme. Bold, iconic, and immediately recognisable — this is the default Jarvis experience. Red primary panels, gold accent lines, and deep grey backgrounds echo the Mark III armour. If you're not sure where to start, start here.
+  </Accordion>
+
+  <Accordion title="🔵 Arc Reactor Blue">
+    **Palette:** Electric blue and crisp white.
+
+    Inspired by the arc reactor's cold fusion glow, this theme bathes the HUD in brilliant blue light with bright white text and circuit-line accents. High contrast and easy on the eyes in darkened environments. A favourite for late-night sessions.
+  </Accordion>
+
+  <Accordion title="🟠 Stealth">
+    **Palette:** Dark charcoal and burnt orange.
+
+    Low-light. Tactical. No unnecessary brightness. The Stealth theme strips the interface back to near-black backgrounds with subtle orange outlines — designed to reduce eye strain and minimise screen glow in dark rooms. Think field operations, not press conferences.
+  </Accordion>
+
+  <Accordion title="🟣 Vibranium">
+    **Palette:** Deep purple and metallic silver.
+
+    Wakandan-inspired, this theme channels the energy of vibranium — deep violet backgrounds shimmer with silver filigree accents and a subtle iridescent sheen on panel borders. Elegant, powerful, and unlike anything from Stark's wardrobe.
+  </Accordion>
+
+  <Accordion title="⬜ Ghost">
+    **Palette:** Clean white and light grey.
+
+    Jarvis's light mode. Ghost reduces the HUD to its essentials — a minimal white interface with soft grey dividers and barely-there animations. Ideal for well-lit spaces, presentations, or users who prefer a cleaner aesthetic over the full sci-fi experience.
+  </Accordion>
+
+  <Accordion title="🟢 Neon Circuit">
+    **Palette:** Bright green on pure black.
+
+    Full cyberpunk. Neon Circuit renders the HUD as a glowing green circuit board against a black void, with pulsing grid lines and high-energy particle effects. Maximalist, retro-futuristic, and undeniably cool — if your setup has RGB lighting, this is the theme to match it to.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Accent Color
+
+Every built-in theme has a default accent color, but you can override it with any custom hex value using the **Accent Color Picker**.
+
+Click the color swatch next to **Accent Color** in the Appearance tab, then either:
+- Pick from the color wheel, or
+- Type a hex value directly (e.g. `#00FFD1` for a mint green accent)
+
+The accent color applies to interactive elements, active borders, progress indicators, and highlighted text throughout the HUD.
+
+---
+
+## Background Intensity
+
+<ParamField name="Background Intensity" type="slider" default="60%">
+  Controls the brightness of the animated HUD background effects — glowing grids, reactive panels, and ambient light pulses. 
+
+  - **Low (0–30%)**: Subtle, unobtrusive ambience.
+  - **Medium (30–70%)**: Balanced visual presence without distraction.
+  - **High (70–100%)**: Full cinematic immersion.
+</ParamField>
+
+---
+
+## Particle Density
+
+<ParamField name="Particle Density" type="select" default="Medium">
+  Determines how many animated particles, floating sparks, and data fragments drift across the HUD background.
+
+  | Option | Description |
+  |---|---|
+  | **Off** | No particles — static background only. Best for performance on lower-end hardware. |
+  | **Low** | A sparse scattering of slow-moving particles. |
+  | **Medium** | The default — a lively but readable particle field. |
+  | **High** | Dense, fast-moving particle streams for maximum atmosphere. |
+</ParamField>
+
+---
+
+## Reduced Motion
+
+Toggle **Reduced Motion** to **On** to disable all HUD animations — particle effects, panel transitions, background pulses, and reactive elements will be replaced with static equivalents.
+
+<Tip>
+  **Reduced Motion** is not just an accessibility feature — it's also a meaningful performance boost on older hardware or when running Jarvis alongside resource-intensive applications. If you notice any lag or frame drops in the HUD, enabling Reduced Motion is the first thing to try.
+</Tip>
+
+---
+
+## Compact Mode
+
+Toggle **Compact Mode** to **On** to collapse decorative HUD elements — including corner brackets, animated borders, status readouts, and background panel flourishes — giving you a cleaner, roomier chat interface.
+
+Compact Mode preserves all functional elements (chat input, messages, controls) while removing purely decorative chrome. Ideal for smaller screens or users who prioritise readable content over visual spectacle.
+
+---
+
+## Explore Further
+
+<CardGroup cols={2}>
+  <Card title="HUD Interface Overview" icon="display" href="/features/hud-interface">
+    Learn about the full Jarvis HUD layout — panels, controls, overlays, and interactive elements explained.
+  </Card>
+  <Card title="Personality Settings" icon="sliders" href="/customization/personality">
+    Already have the look right? Dial in how Jarvis communicates — tone, verbosity, and full Jarvis Mode character settings.
+  </Card>
+</CardGroup>

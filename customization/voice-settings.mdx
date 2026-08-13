@@ -1,0 +1,137 @@
+---
+title: "Configure Jarvis Voice: Speed, Pitch, and Language"
+sidebarTitle: "Voice Settings"
+description: "Customise the voice Jarvis uses to speak — choose from multiple AI voices, adjust speed and pitch, and configure your microphone input settings."
+---
+
+Jarvis's voice is one of its most distinctive features. Whether you're listening to a mission briefing through your headphones or going hands-free with wake word activation, Voice Settings give you full control over how Jarvis sounds — and how it hears you.
+
+## Accessing Voice Settings
+
+<Steps>
+  <Step title="Open Settings">
+    Click the **gear icon** (⚙️) in the top-right corner of the Jarvis HUD.
+  </Step>
+  <Step title="Navigate to Voice">
+    Select the **Voice** tab in the left-hand settings menu.
+  </Step>
+  <Step title="Configure output and input">
+    Adjust voice, microphone, wake word, and language options as described below.
+  </Step>
+  <Step title="Save changes">
+    Click **Apply** to confirm your settings. Voice output changes take effect immediately — test them with the **Preview** button.
+  </Step>
+</Steps>
+
+---
+
+## Jarvis Voice (Output)
+
+Control exactly how Jarvis sounds when it speaks responses aloud.
+
+### Voice Selection
+
+Choose from six distinct AI voices, each with a unique character:
+
+| Voice | Character |
+|---|---|
+| **Atlas** | Deep, measured, and authoritative — the classic AI assistant tone. |
+| **Nova** | Bright and clear with a warm, neutral accent. |
+| **Orion** | Smooth baritone with a slight British inflection — closest to the original JARVIS. |
+| **Echo** | Crisp and precise, with a slightly cooler, robotic edge. |
+| **Stella** | Confident and articulate — calm under pressure. |
+| **Titan** | Rich and resonant, with commanding presence. |
+
+### Speed
+
+<ParamField name="Speed" type="slider" default="1.0×">
+  Controls the pace of Jarvis's speech. Range: **0.5×** (slow and deliberate) to **2.0×** (rapid-fire briefing). The default of **1.0×** matches natural conversational speech.
+</ParamField>
+
+### Pitch
+
+<ParamField name="Pitch" type="select" default="Normal">
+  Shifts the vocal register of the selected voice. Options: **Low**, **Normal**, **High**. Useful for differentiating Jarvis from other audio sources in your environment.
+</ParamField>
+
+### Volume
+
+<ParamField name="Volume" type="slider" default="80%">
+  Sets Jarvis's output volume independently of your system volume. Range: **0%** to **100%**. Useful when using Jarvis alongside other audio sources.
+</ParamField>
+
+### Voice Preview
+
+Click **Test Voice** to hear Jarvis speak a sample phrase using your current voice, speed, pitch, and volume settings. The preview phrase is:
+
+> *"All systems are operational. How may I assist you today?"*
+
+---
+
+## Microphone Input
+
+Configure how Jarvis listens to you during voice conversations.
+
+### Input Device
+
+<ParamField name="Input Device" type="dropdown">
+  Select which microphone Jarvis uses for voice input. The dropdown automatically lists all microphones detected by your system. If a new device is connected, click **Refresh** to update the list.
+</ParamField>
+
+### Input Sensitivity / Noise Threshold
+
+<ParamField name="Noise Threshold" type="slider" default="30%">
+  Sets the minimum audio level Jarvis treats as intentional speech. Increase the threshold in noisy environments to prevent background sounds from triggering responses; lower it in quiet spaces for better pickup on soft speech.
+</ParamField>
+
+<Tip>
+  If Jarvis frequently triggers on background noise (keyboard clatter, TV audio, ambient sound), try increasing the noise threshold in increments of 10% until false triggers stop. Headsets with close-range microphones typically work well at lower threshold values.
+</Tip>
+
+### Silence Detection Delay
+
+<ParamField name="Silence Detection Delay" type="slider" default="1.0s">
+  Determines how long Jarvis waits after you stop speaking before processing your input. Range: **0.5 seconds** to **3.0 seconds**. 
+
+  - **Shorter delay**: faster responses, but may cut off if you pause mid-sentence.
+  - **Longer delay**: gives you more time to think between phrases without Jarvis interrupting.
+</ParamField>
+
+---
+
+## Wake Word
+
+Enable **"Hey Jarvis"** to activate voice input completely hands-free — no button press required.
+
+Toggle **Wake Word Activation** to **On** in Voice Settings. Once enabled, Jarvis continuously monitors your microphone for the phrase *"Hey Jarvis"* and begins listening for your command immediately after detection.
+
+<Warning>
+  Enabling wake word activation requires **always-on microphone permission**. Jarvis processes wake word audio locally on-device and does not transmit audio to external servers until the wake word is detected. However, if you are in a sensitive environment or using a shared device, consider leaving this feature disabled and using the push-to-talk button instead.
+</Warning>
+
+---
+
+## Language
+
+Select the language for Jarvis's **speech recognition** (voice input). Jarvis will interpret your spoken words in the selected language and respond accordingly.
+
+Supported languages include:
+
+- 🇺🇸 English (US)
+- 🇬🇧 English (UK)
+- 🇪🇸 Spanish
+- 🇫🇷 French
+- 🇩🇪 German
+- 🇯🇵 Japanese
+- 🇨🇳 Mandarin (Simplified)
+- 🇧🇷 Portuguese (Brazilian)
+
+<Note>
+  The **Language** setting affects voice input recognition only. Jarvis's text responses will match the language of your input regardless of this setting.
+</Note>
+
+---
+
+## Reset to Defaults
+
+Click **Reset Voice Settings to Defaults** at the bottom of the Voice tab to restore all output and input options to their factory values. This action cannot be undone, but your settings can be manually reconfigured at any time.

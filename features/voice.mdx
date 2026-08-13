@@ -1,0 +1,140 @@
+---
+title: "Voice Mode: Talk to Jarvis Hands-Free"
+sidebarTitle: "Voice"
+description: "Activate Jarvis's voice mode to speak naturally and hear responses. Real-time speech recognition and synthesis make every interaction feel futuristic."
+---
+
+## Overview
+
+Voice Mode transforms Jarvis from a chat interface into a fully conversational AI companion — exactly the kind you'd expect if you just stepped into Tony Stark's lab. Speak naturally, ask anything, and hear Jarvis respond in a crisp synthesized voice while the HUD animates around you in real time.
+
+No typing required. No rigid commands to memorize. Just talk.
+
+Whether you're working hands-free at your desk, walking through a workflow out loud, or simply prefer conversation to keyboards, Voice Mode delivers an experience that feels genuinely futuristic.
+
+---
+
+## Activating Voice Mode
+
+<Steps>
+  <Step title="Locate the Microphone Button">
+    Find the **glowing microphone button** at the center of the arc reactor motif in the HUD. It pulses gently in standby mode, indicating it's ready to activate.
+  </Step>
+  <Step title="Grant Microphone Permission">
+    On first use, your browser will request microphone access. Click **Allow** in the permission dialog. Jarvis cannot hear you until this permission is granted.
+
+    <Warning>
+      Microphone permission must be granted at the browser level. If you accidentally clicked **Block**, you'll need to reset permissions manually. In Chrome or Edge, click the **lock icon** in the address bar → **Site Settings** → set **Microphone** to **Allow**, then refresh the page.
+    </Warning>
+  </Step>
+  <Step title="Click to Start Listening">
+    Click the microphone button once. The waveform animation ring around the button activates — a pulsing, colour-shifting arc that expands and contracts with your voice amplitude, confirming that Jarvis is listening.
+  </Step>
+  <Step title="Speak Naturally">
+    Talk at a normal pace and volume. You don't need to use special keywords mid-sentence. When you naturally pause or finish speaking, Jarvis auto-detects the end of your input and begins processing.
+  </Step>
+  <Step title="Receive the Response">
+    Jarvis replies via synthesized voice while simultaneously rendering the response as animated text in the chat panel. You can read along as Jarvis speaks.
+  </Step>
+  <Step title="Continue the Conversation">
+    The microphone automatically re-activates after Jarvis finishes speaking, keeping the conversation flowing. To pause Voice Mode at any time, click the microphone button again.
+  </Step>
+</Steps>
+
+---
+
+## Visual Feedback
+
+Jarvis gives you clear, real-time visual cues so you always know what's happening:
+
+| State | Visual Indicator |
+|---|---|
+| **Standby** | Mic button glows softly, arc ring pulses slowly |
+| **Listening** | Arc ring expands and flickers with your voice waveform |
+| **Processing** | Arc ring shifts to amber with a rotating thinking animation |
+| **Speaking** | Arc ring pulses in sync with Jarvis's voice output; text renders character by character in the chat panel |
+| **Error** | Arc ring flashes red with an error status message |
+
+---
+
+## Jarvis's Voice
+
+Jarvis speaks back using a high-quality **AI voice synthesizer**. By default, Jarvis uses a calm, authoritative voice designed to match the character's tone. You can customize this in **Settings → Voice**:
+
+- **Voice style** — Choose from several voice profiles (e.g., Classic, Neutral, Expressive)
+- **Playback speed** — Adjust how fast Jarvis speaks (0.75× to 1.5×)
+- **Volume** — Independent of your system volume for fine control
+
+<Tip>
+  If you prefer to read responses rather than hear them, you can turn off **Speech Output** in Settings while keeping Speech Input active — the microphone still works, but Jarvis replies silently in the chat panel.
+</Tip>
+
+---
+
+## Switching Between Voice and Text
+
+Voice Mode and text chat are fully interchangeable mid-conversation. Jarvis maintains the same conversation context regardless of input method.
+
+- **Voice → Text:** Click the microphone button to deactivate voice input, then type in the chat input bar as normal.
+- **Text → Voice:** Click the microphone button at any time to resume speaking, even if your last several messages were typed.
+
+Jarvis never loses the thread — it remembers whether you typed or spoke a message and responds coherently either way.
+
+---
+
+## "Hey Jarvis" Wake Word
+
+When enabled in **Settings → Voice → Wake Word**, you can activate listening hands-free by saying **"Hey Jarvis"** without clicking anything. The HUD will flash briefly to confirm wake word detection before entering listening mode.
+
+<Note>
+  Wake word detection runs locally in the background and only activates the microphone on trigger. It does not transmit audio until the wake word is confirmed. You can disable this feature at any time from the Voice settings panel.
+</Note>
+
+---
+
+## Browser Compatibility
+
+<Tabs>
+  <Tab title="Chrome">
+    **Fully supported — recommended.** Chrome provides the best Speech Recognition accuracy and lowest latency using the Web Speech API. All Voice Mode features, including wake word detection, work as intended.
+  </Tab>
+  <Tab title="Edge">
+    **Fully supported — recommended.** Microsoft Edge (Chromium-based) offers equivalent performance to Chrome. An excellent choice on Windows devices.
+  </Tab>
+  <Tab title="Safari">
+    **Supported with limitations.** Safari supports basic Speech Recognition on macOS 14+ and iOS 17+. Wake word detection may not be available. Speech output works fully. For best results, keep Safari updated.
+  </Tab>
+  <Tab title="Firefox">
+    **Limited support.** Firefox does not natively support the Web Speech API for speech recognition. Voice output (Jarvis speaking) works, but speech input requires enabling experimental flags. We recommend using Chrome or Edge for the full Voice Mode experience on Firefox-based setups.
+  </Tab>
+</Tabs>
+
+---
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Microphone not detected">
+    - Ensure your microphone is physically connected and recognized by your operating system (check System Settings → Sound → Input).
+    - Confirm no other application (e.g., a video call) has exclusive control of the microphone.
+    - Try refreshing the Jarvis page and granting permission again when prompted.
+    - On some systems, you may need to explicitly allow browser microphone access at the OS level (macOS: System Settings → Privacy & Security → Microphone → enable your browser).
+  </Accordion>
+  <Accordion title="Permission blocked — can't hear my voice">
+    If you previously denied microphone access, the browser won't prompt again automatically. To reset:
+    - **Chrome/Edge:** Click the 🔒 lock icon in the address bar → Site Settings → Microphone → Allow.
+    - **Safari:** Safari menu → Settings for This Website → Microphone → Allow.
+    - **Firefox:** Click the microphone icon in the address bar → Remove Blocked Permission, then reload.
+  </Accordion>
+  <Accordion title="Jarvis mishears my words">
+    - Speak clearly and at a moderate pace — extremely fast speech can reduce accuracy.
+    - Reduce background noise where possible.
+    - Use an external microphone or headset rather than a built-in laptop mic for significantly better recognition quality.
+    - Switch to Chrome or Edge if you're on a browser with limited Speech API support.
+  </Accordion>
+  <Accordion title="No audio from Jarvis's voice">
+    - Check that your system volume is not muted and the Jarvis voice volume slider (Settings → Voice) is turned up.
+    - Some browsers require a user interaction before playing audio. Click anywhere on the page, then try triggering a voice response again.
+    - Confirm that your browser has not blocked autoplay audio for the Jarvis site (check Site Settings → Sound).
+  </Accordion>
+</AccordionGroup>
